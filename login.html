@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Login</title>
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var nameRegex = /^[A-Za-z\s]+$/; // Regular expression to match only letters and spaces in the name
+            var emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/; // Simple email validation
+            var passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&])(?=.*\d).+$/; // Password requirements: at least one uppercase letter, one special character, and one digit
+    
+            var nameValid = nameRegex.test(name);
+            var emailValid = emailRegex.test(email);
+            var passwordValid = passwordRegex.test(password);
+    
+            if (!nameValid) {
+                document.getElementById("nameError").textContent = "Name should only contain letters and spaces.";
+            } else {
+                document.getElementById("nameError").textContent = "";
+            }
+    
+            if (!emailValid) {
+                document.getElementById("emailError").textContent = "Please enter a valid email address.";
+            } else {
+                document.getElementById("emailError").textContent = "";
+            }
+    
+            if (!passwordValid) {
+                document.getElementById("passwordError").textContent = "Password should contain at least one uppercase letter, one special character, and one digit.";
+            } else {
+                document.getElementById("passwordError").textContent = "";
+            }
+    
+            if (nameValid && emailValid && passwordValid) {
+                // Simulated successful login; replace with your actual authentication logic
+                window.location.href = "index.html"; // Redirect to the dashboard page
+                return false; // Prevent form submission
+            }
+    
+            return false; // Prevent form submission
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="loginbox">
+        <img src="https://secure-media.hotstar.com/web-assets/prod/images/Disney+Hotstar.jpg">
+        <form onsubmit="return validateForm()">
+            <h1>LOGIN HERE</h1>
+            <p>Name</p>
+            <input type="text" id="name" name="name" placeholder="ENTER YOUR NAME" required>
+            <span id="nameError" style="color: rgb(92, 234, 107);"></span>
+            <p>Email</p>
+            <input type="text" id="email" name="email" placeholder="ENTER YOUR EMAIL" required>
+            <span id="emailError" style="color: rgb(92, 234, 107);"></span>
+            <p>PASSWORD</p>
+            <input type="password" id="password" name="password" placeholder="ENTER YOUR PASSWORD" required>
+            <span id="passwordError" style="color: rgb(92, 234, 107);"></span>
+            <input type="submit" value="LOGIN">
+            <a href="#">FORGET PASSWORD</a>
+            <a href="register.html">CREATE AN ACCOUNT</a>
+        </form>
+    </div>
+</body>
+</html>

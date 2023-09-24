@@ -1,0 +1,88 @@
+body{
+  margin:0px;
+  padding: 0px;
+  background:url('https://img.paisawapas.com/ovz3vew9pw/2022/09/06184733/Rectangle-1-97.png');
+  background-size:cover;
+  background-position: center;
+}
+.loginbox{
+  height: 517spx;
+  width: 320px;
+  position: absolute;
+  background: url('https://filmdaily.co/wp-content/uploads/2021/01/disneyplusfree-02.jpg');
+  border-top-left-radius:22px ;
+  border-bottom-right-radius: 22px;
+  color: white;
+  top:50%;
+  left: 30%;
+  transform: translate(50% ,-50%);
+   box-sizing: border-box;
+   padding: 30px 60px;
+}
+.loginbox img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  left: calc(36% );
+  top: -50px;
+  position: absolute;
+}
+form h1{
+  text-align: center;
+  margin-top: 30px;
+  font-size: 22px;
+  font-family: monospace;
+}
+form p{
+  margin:0px;
+  padding: 0px;
+  font-weight: bolder;
+  font-family: monospace;
+  font-size: 16px;
+}
+.loginbox input{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.loginbox input[type="text"], input[type="password"]
+{
+  border:none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+  height:50px;
+  color: white;
+  font-family: monospace;
+}
+.loginbox input[type="submit"]
+{
+  border:2px solid;
+  cursor: pointer;
+  background: skyblue;
+  border-radius: 15px;
+  height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.loginbox input[type="submit"]:hover{
+  cursor: pointer;
+  height: 44px;
+  color: navy;
+  font-family: monospace;
+}
+.forget password a:hover {
+  background-color: #000000;
+}
+
+.loginbox a {
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: sans-serif;
+  color: rgb(255, 253, 253);
+  text-align: center;
+  cursor: pointer;
+  display: block; /* Make the links block-level elements */
+  margin-top: 15px; /* Add some spacing between the links */
+}
